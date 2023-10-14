@@ -10,16 +10,13 @@ function Navbar() {
   return (
     <NavbarBs bg="dark" data-bs-theme="dark">
       <Container fluid>
-        <NavbarBs.Brand href="/">Tienda</NavbarBs.Brand>
+        <NavbarBs.Brand href="/">Home</NavbarBs.Brand>
         <Nav className="nav-conteiner justify-content-evenly">
           <Nav.Item>
-            <Link to='/' className='link'>Home</Link>
+            <Link to='/create' className='link'>Cargar</Link>
           </Nav.Item>
           <Nav.Item>
-            <Link to='/create' className='link'>Cargar Producto</Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Link to='/show' className='link'>Lista de Productos</Link>
+            <Link to='/show' className='link'>Lista</Link>
           </Nav.Item>
         </Nav>
       </Container>

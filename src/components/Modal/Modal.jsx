@@ -6,6 +6,7 @@ import ModalBs from 'react-bootstrap/Modal';
 import FormBs from 'react-bootstrap/Form';
 import { ItemsContext, UPLOAD_ITEMS } from '../context/itemsContext';
 import { axiosInstance } from '../../services/axios.config';
+import Swal from 'sweetalert2';
 
 const Modal = (props) => {
 
@@ -37,7 +38,7 @@ const Modal = (props) => {
     >
       <ModalBs.Header closeButton className='bg-dark'>
         <ModalBs.Title id="contained-modal-title-vcenter">
-          ModalBs heading
+          Editar Producto
         </ModalBs.Title>
       </ModalBs.Header>
       <ModalBs.Body className='bg-dark'>
@@ -60,7 +61,18 @@ const Modal = (props) => {
                 } else {
                   throw new Error(`Error [${r.status}] en la solicitud`)
                 }
-              })
+              },
+                Swal.fire({
+                  position: 'center',
+                  background: '#2B2D2E',
+                  icon: 'success',
+                  width: '350',
+                  title: '¡Editado con éxito!',
+                  color: '#3FAD2B',
+                  showConfirmButton: false,
+                  timer: 1200
+                })
+              )
               .catch(err => console.log(err))
             props.onHide()
           }}>
