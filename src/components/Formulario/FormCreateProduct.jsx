@@ -96,7 +96,7 @@ function FormCreateProduct() {
 
               <Button className='btn btn-primary' type='submit'>Cargar Producto</Button>
               {
-                isSubmitting ? (<p></p>) : null
+                isSubmitting ? (<p>Producto Cargado</p>) : null
               }
             </Form>
           )

@@ -10,6 +10,7 @@ const Table = ({ items }) => {
         <tr>
           <th style={{ textAlign: 'center' }}>#ID</th>
           <th>Producto</th>
+          <th style={{ textAlign: 'center' }}>Descripción</th>
           <th style={{ textAlign: 'center' }}>Precio</th>
           <th style={{ textAlign: 'center' }}>Stock</th>
           <th style={{ textAlign: 'center' }}>Modificar</th>

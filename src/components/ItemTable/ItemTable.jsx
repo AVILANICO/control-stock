@@ -5,7 +5,7 @@ import { axiosInstance } from '../../services/axios.config';
 import { ItemsContext, UPLOAD_ITEMS } from '../context/itemsContext';
 
 const ItemTable = ({ item }) => {
-  const { name, price, stock, id } = item
+  const { name, description, price, stock, id } = item
   const [modalShow, setModalShow] = useState(false);
   const { items, dispatch } = useContext(ItemsContext)
 
@@ -25,6 +25,7 @@ const ItemTable = ({ item }) => {
       <tr>
         <td style={{ textAlign: 'center' }}>{id}</td>
         <td>{name}</td>
+        <td style={{ textAlign: 'center' }}>{description}</td>
         <td style={{ textAlign: 'center' }}>{price}</td>
         <td style={{ textAlign: 'center' }}>{stock}</td>
         <td style={{
