@@ -57,6 +57,7 @@ const ItemTable = ({ item }) => {
       cancelButtonText: 'Cancelar',
       background: '#2B2D2E',
       color: '#fff',
+      width: '400',
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
