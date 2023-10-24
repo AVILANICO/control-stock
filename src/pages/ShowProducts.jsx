@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { axiosInstance } from '../services/axios.config';
 import Table from '../components/Table/Table';
 import { ItemsContext, UPLOAD_ITEMS } from '../components/context/itemsContext';
+import './showProducts.css'
 
 const ShowProducts = () => {
   // const [items, setItems] = useState([]);
@@ -21,43 +22,11 @@ const ShowProducts = () => {
       .catch(err => console.log(err))
   }, [])
 
-  // const editItem = (id, data) => {
-  //   console.log("editando producto")
-  //   axiosInstance.put(`/${id}`, data)
-  //     .then(r => {
-  //       if (r.status == 200) {
-  //         //     axiosInstance.get('/')
-  //         //       .then(r => {
-  //         //         if (r.status == 200) {
-  //         //           setItems(r.data)
-  //         //         } else {
-  //         //           throw new Error(`[ERROR ${r.status} Error en la solicitud]`)
-  //         //         }
-  //         //       })
-  //         //       .catch(err => console.log(err))
-  //         //   } else {
-  //         //     throw new Error(`[ERROR ${r.status} Error en la solicitud]`)
-  //         //   }
-  //         // })
-  //         // .catch(err => console.log(err)
-
-  //         const updateItems = items.map(item => {
-  //           if (item.id === r.data.id) {
-  //             return r.data
-  //           }
-  //           return item
-  //         })
-  //         setItems(updateItems)
-  //       } else {
-  //         throw new Error(`[ERROR ${r.status} Error en la solicitud]`)
-  //       }
-  //     })
-  // }
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>Lista de Productos en Stock</h1>
-      <div className='container mt-3'>
+      <h1 style={{ textAlign: 'center' }}>Lista de Productos</h1>
+      <div>
         {
           items.length > 0 ?
             <Table items={items} />

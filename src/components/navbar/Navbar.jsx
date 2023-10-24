@@ -8,7 +8,7 @@ import './navbar.css'
 
 function Navbar() {
   return (
-    <NavbarBs bg="dark" data-bs-theme="dark">
+    <NavbarBs bg="dark" data-bs-theme="dark" expand="sm">
       <Container fluid>
         <NavbarBs.Brand href="/">Home</NavbarBs.Brand>
         <Nav className="nav-conteiner justify-content-evenly">

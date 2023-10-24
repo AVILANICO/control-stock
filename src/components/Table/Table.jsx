@@ -5,7 +5,7 @@ import ItemTable from '../ItemTable/ItemTable';
 const Table = ({ items }) => {
 
   return (
-    <TableBs striped bordered hover variant="dark">
+    <TableBs striped bordered hover variant="dark" responsive="sm">
       <thead>
         <tr>
           <th style={{ textAlign: 'center' }}>#ID</th>
